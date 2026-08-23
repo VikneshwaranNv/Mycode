@@ -1,11 +1,24 @@
-import java.util.Scanner;  
+class Student {
+    String name;
+    int mark;
 
-public class main {
-  public static void main(String[] args) {
-    Scanner myObj = new Scanner(System.in);  
-    System.out.println("Enter username");
+    Student(String name, int mark) {
+        this.name = name;
+        this.mark = mark;
+    }
+}
 
-    String userName = myObj.nextLine();  
-    System.out.println("Username is: " + userName); 
-  }
+public class Main {
+
+    static void display(Student s) {
+        System.out.println("Name: " + s.name);
+        System.out.println("Mark: " + s.mark);
+    }
+
+    public static void main(String[] args) {
+
+        Student student1 = new Student("Vicky", 90);
+
+        display(student1);
+    }
 }
